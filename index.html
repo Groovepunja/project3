@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Homepage</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="tab-link" data-tab="home">Home</a></li>
+            <li><a href="#" class="tab-link" data-tab="contact">Contact</a></li>
+            <li><a href="#" class="tab-link" data-tab="about">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="tab-content">
+            <h2>Home Section</h2>
+            <article>
+                <h3>My Web Projects</h3>
+                <p>Here, I showcase some of my latest web projects, including CSS styling and layout with Grid and Flexbox.</p>
+            </article>
+        </section>
+
+        <section id="contact" class="tab-content" style="display:none;">
+            <h2>Contact Section</h2>
+            <article>
+                <p>If you want to reach me, here's how:</p>
+                <ul>
+                    <li>Email: user@example.com</li>
+                    <li>Phone: (123) 456-7890</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="about" class="tab-content" style="display:none;">
+            <h2>About Me</h2>
+            <article>
+                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                <p>I'm passionate about web development and design. I enjoy working on CSS Grid, Flexbox, and semantic HTML5 elements.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Homepage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab-link');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetTab = this.getAttribute('data-tab');
+
+                contents.forEach(content => {
+                    if (content.id === targetTab) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
