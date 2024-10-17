@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokkan Battle Wiki</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: beige;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header'
+                'menu main'
+                'footer footer';
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+        }
+        header {
+            grid-area: header;
+            border: 3px solid darkgray;
+            padding: 20px;
+            position: relative;
+        }
+        aside {
+            grid-area: menu;
+            background-color: lightgray;
+            padding: 5px;
+            border: 3px solid darkgray;
+            height: 300px;
+        }
+        main {
+            grid-area: main;
+            padding: 15px;
+        }
+        footer {
+            grid-area: footer;
+            background-color: darkgray;
+            padding: 10px;
+            text-align: center;
+        }
+        hr {
+            border: none;
+            height: 3px;
+            background-color: darkgray;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff5733;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li:nth-child(1) {
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        nav ul li:nth-child(2) {
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        nav ul li:nth-child(3) {
+            border: 2px solid blue;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        nav ul li a {
+            display: block;
+            padding: 10px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: lightgray;
+        }
+        .character-section {
+            margin-bottom: 40px;
+            border: 2px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .character-section h3 {
+            margin-top: 0;
+        }
+        .character-section img {
+            float: left;
+            margin-right: 15px;
+        }
+        .character-section p {
+            font-size: 1.5em;
+            color: #ff5733;
+            font-weight: bold;
+            text-align: left;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin: 10px 0;
+            clear: both;
+        }
+        .video-container {
+            margin-bottom: 20px;
+            text-align: center;
+            border: 3px solid darkgray;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .video-container iframe {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1 align="center"><strong>Dokkan Battle Wiki</strong></h1>
+        <hr>
+        <img src="Dokkanlogo.jpg" alt="Home Page Logo" width="675" height="350" style="float: right; margin-left: 20px;">
+    </header>
+
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="super_characters.html">Super Characters</a></li>
+                <li><a href="extreme_characters.html">Extreme Characters</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h2 align="left"><strong>Featured Units:</strong></h2>
+        
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VGjvQy__28Q" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="character-section" id="Ultra Instinct Goku">
+            <h3>Ultra Instinct Goku</h3>
+            <img src="ultra_instinct_goku.png" alt="Ultra Instinct Goku" width="200">
+            <p><strong>Ultra Instinct Goku is an Agility type character whose special ability is evasion in the most desperate of situations!</strong></p>
+        </div>
+
+        <div class="character-section" id="Super Saiyan Broly">
+            <h3>Super Saiyan Broly</h3>
+            <img src="super_saiyan_broly.png" alt="Super Saiyan Broly" width="200">
+            <p><strong>Super Saiyan Broly is a physical type character who's completely offensive based, able to take the opponent down all by himself!</strong></p>
+        </div>
+
+        <div class="character-section" id="Super Saiyan Blue Evolution Vegeta">
+            <h3>Super Saiyan Evolution Vegeta</h3>
+            <img src="super_saiyan_blue_evolution_vegeta.png" alt="Super Saiyan Blue Evolution Vegeta" width="200">
+            <p><strong>Super Saiyan Blue Evolution Vegeta is an intelligence type character who gets stronger the longer the battle goes on!</strong></p>
+        </div>
+
+        <div class="character-section" id="Beast Gohan">
+            <h3>Beast Gohan</h3>
+            <img src="beast_gohan.png" alt="Beast Gohan" width="200">
+            <p><strong>Beast Gohan is a strength type character who excels in defense and will lead your team to victory!</strong></p>
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Chase Griffin. All rights reserved.</p>
+        <p><a href="#terms">Terms of Use</a> | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
